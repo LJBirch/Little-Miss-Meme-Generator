@@ -1,10 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
+import html2canvas from 'html2canvas';
+
+const generator = () => {
     const text_input = document.getElementById('text-input');
     const font_size_slider = document.getElementById('font-size-slider');
     const font_line_height_slider = document.getElementById('font-line-height-slider');
     const text = document.getElementById('text');
     const save_button = document.getElementById('save');
     const generator_content = document.getElementById('generator-content');
+
+
 
     let original_font_size = window.getComputedStyle(text, null).getPropertyValue('font-size');
     original_font_size = parseFloat(original_font_size.replace('px', ''));
@@ -47,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Get the button that opens the modal
     let btn = document.getElementById("modal-btn");
 
-    btn.onclick = function() {
+    btn.onclick = function () {
         modal.style.display = "block";
     };
 
@@ -65,4 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         });
     });
-});
+};
+
+export default generator;
