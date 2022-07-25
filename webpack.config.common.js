@@ -42,7 +42,8 @@ module.exports = {
         new HtmlWebPackPlugin({
             title: "Little Miss Meme Generator",
             filename: "index.html",
-            template: "src/template.html"
+            template: "src/template.html",
+            favicon: 'src/assets/favicon.ico'
         }),
         new BundleAnalyzerPlugin()
     ]
