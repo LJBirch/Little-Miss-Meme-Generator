@@ -7,6 +7,4 @@ function importAll(r) {
 
 const images = importAll(require.context('./assets/images', false, /\.(webp)$/));
 
-console.log(images)
-
 generator(images);
